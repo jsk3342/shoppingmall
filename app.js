@@ -76,3 +76,18 @@ window.a = 3;
 window.b = 4;
 
 console.log(a + b);
+
+var 버튼들 = document.querySelectorAll("button");
+var 모달창들 = document.querySelectorAll("div");
+
+버튼들[0].addEventListener("click", function () {
+  모달창들[0].style.display = "block";
+});
+
+버튼들[1].addEventListener("click", function () {
+  모달창들[1].style.display = "block";
+});
+
+버튼들[2].addEventListener("click", function () {
+  모달창들[2].style.display = "block";
+});
