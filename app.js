@@ -77,17 +77,15 @@ window.b = 4;
 
 console.log(a + b);
 
-var 버튼들 = document.querySelectorAll("button");
-var 모달창들 = document.querySelectorAll("div");
+var pants = 0;
+var socks = 100;
 
-버튼들[0].addEventListener("click", function () {
-  모달창들[0].style.display = "block";
-});
+function 해체분석기(문자, ...변수) {
+  if (변수[0] == 0) {
+    console.log(문자[0] + "안팔아요" + 문자[1] + 변수[1]);
+  } else console.log(문자[0] + 변수[0] + 문자[1] + 변수[1]);
+}
+해체분석기`바지${pants} 양말${socks}`;
 
-버튼들[1].addEventListener("click", function () {
-  모달창들[1].style.display = "block";
-});
-
-버튼들[2].addEventListener("click", function () {
-  모달창들[2].style.display = "block";
-});
+var 연습1 = ["hello", "world"];
+console.log(연습1);
