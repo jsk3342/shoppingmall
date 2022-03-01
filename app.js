@@ -118,3 +118,15 @@ function 함수(a = 5, b = a * 2) {
   console.log(a + b);
 }
 함수(undefined, undefined);
+
+function 글자세기(글) {
+  var 결과 = {};
+  [...글].forEach(function (a) {
+    if (결과[a] > 0) {
+      결과[a]++;
+    } else {
+      결과[a] = 1;
+    }
+  });
+  console.log(결과);
+}
