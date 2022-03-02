@@ -1,94 +1,94 @@
-// // function 반복문() {
-// //   for (let i = 0; i < 11; i++) {
-// //     if (i == 8) {
-// //       continue;
-// //     }
-// //     console.log(i);
-// //   }
-// // }
-
-// // 반복문();
-
-// function 더하기(a, b) {
-//   return a + b;
-// }
-// function 빼기(a, b) {
-//   return a - b;
-// }
-
-// function calculate(command, a, b) {
-//   switch (command) {
-//     case "add":
-//       return a + b;
-//     case "substract":
-//       return a - b;
-//     case "divide":
-//       return a / b;
-//     case "multiply":
-//       return a * b;
-//     case "remainder":
-//       return a % b;
-//     default:
-//       throw Error("unkown command");
+// function 반복문() {
+//   for (let i = 0; i < 11; i++) {
+//     if (i == 8) {
+//       continue;
+//     }
+//     console.log(i);
 //   }
 // }
 
-// // console.log(calculate("add", 3, 5)); //8
+// 반복문();
 
-// var 함수 = () => {};
+function 더하기(a, b) {
+  return a + b;
+}
+function 빼기(a, b) {
+  return a - b;
+}
 
-// 함수();
+function calculate(command, a, b) {
+  switch (command) {
+    case "add":
+      return a + b;
+    case "substract":
+      return a - b;
+    case "divide":
+      return a / b;
+    case "multiply":
+      return a * b;
+    case "remainder":
+      return a % b;
+    default:
+      throw Error("unkown command");
+  }
+}
 
-// [1, 2, 3, 4].forEach(a => console.log(a));
+// console.log(calculate("add", 3, 5)); //8
 
-// var 사람 = {
-//   name: "손흥민",
-//   sayHi: function () {
-//     console.log(`안녕 나는 ${사람.name}`);
-//   },
-// };
+var 함수 = () => {};
 
-// 사람.sayHi();
+함수();
 
-// var 자료 = {
-//   data: [1, 2, 3, 4, 5],
-// };
+[1, 2, 3, 4].forEach(a => console.log(a));
 
-// 자료.전부더하기 = function () {
-//   var 합 = 0;
-//   this.data.forEach(function (a) {
-//     합 = 합 + a;
-//   });
-//   console.log(합);
-// };
+var 사람 = {
+  name: "손흥민",
+  sayHi: function () {
+    console.log(`안녕 나는 ${사람.name}`);
+  },
+};
 
-// 자료.전부더하기();
+사람.sayHi();
 
-// document.getElementById("버튼").addEventListener("click", function () {
-//   setTimeout(function () {
-//     console.log("안녕");
-//   }, 1000);
-// });
+var 자료 = {
+  data: [1, 2, 3, 4, 5],
+};
 
-// let a = 1;
-// var b = 2;
-// window.a = 3;
-// window.b = 4;
+자료.전부더하기 = function () {
+  var 합 = 0;
+  this.data.forEach(function (a) {
+    합 = 합 + a;
+  });
+  console.log(합);
+};
 
-// console.log(a + b);
+자료.전부더하기();
 
-// var pants = 0;
-// var socks = 100;
+document.getElementById("버튼").addEventListener("click", function () {
+  setTimeout(function () {
+    console.log("안녕");
+  }, 1000);
+});
 
-// function 해체분석기(문자, ...변수) {
-//   if (변수[0] == 0) {
-//     console.log(문자[0] + "안팔아요" + 문자[1] + 변수[1]);
-//   } else console.log(문자[0] + 변수[0] + 문자[1] + 변수[1]);
-// }
-// 해체분석기`바지${pants} 양말${socks}`;
+let a = 1;
+var b = 2;
+window.a = 3;
+window.b = 4;
 
-// var 연습1 = ["hello", "world"];
-// console.log(연습1);
+console.log(a + b);
+
+var pants = 0;
+var socks = 100;
+
+function 해체분석기(문자, ...변수) {
+  if (변수[0] == 0) {
+    console.log(문자[0] + "안팔아요" + 문자[1] + 변수[1]);
+  } else console.log(문자[0] + 변수[0] + 문자[1] + 변수[1]);
+}
+해체분석기`바지${pants} 양말${socks}`;
+
+var 연습1 = ["hello", "world"];
+console.log(연습1);
 
 var a = 5;
 function test() {
@@ -118,15 +118,3 @@ function 함수(a = 5, b = a * 2) {
   console.log(a + b);
 }
 함수(undefined, undefined);
-
-function 글자세기(글) {
-  var 결과 = {};
-  [...글].forEach(function (a) {
-    if (결과[a] > 0) {
-      결과[a]++;
-    } else {
-      결과[a] = 1;
-    }
-  });
-  console.log(결과);
-}
