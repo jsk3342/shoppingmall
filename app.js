@@ -119,9 +119,30 @@
 // }
 // 함수(undefined, undefined);
 
-function 어레이(...rest) {
-  return rest;
+// function 어레이(...rest) {
+//   return rest;
+// }
+
+// var newArray = 어레이(1, 2, 3, 4, 5);
+// console.log(newArray);
+
+// var 이름1 = { name: "김" };
+// console.log(이름1);
+// function 변경(obj) {
+//   obj = { name: "park" };
+//   console.log(obj);
+// }
+
+// 변경(이름1);
+
+// console.log(이름1);
+
+var 숫자1 = { age: 50 };
+console.log(숫자1); // ?
+function 변경(obj) {
+  obj.age = 100;
+  console.log(obj); // ?
 }
 
-var newArray = 어레이(1, 2, 3, 4, 5);
-console.log(newArray);
+변경(숫자1);
+console.log(숫자1); // ?
