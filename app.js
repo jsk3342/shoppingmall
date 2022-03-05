@@ -137,12 +137,30 @@
 
 // console.log(이름1);
 
-var 숫자1 = { age: 50 };
-console.log(숫자1); // ?
-function 변경(obj) {
-  obj.age = 100;
-  console.log(obj); // ?
+// var 숫자1 = { age: 50 };
+// console.log(숫자1); // ?
+// function 변경(obj) {
+//   obj.age = 100;
+//   console.log(obj); // ?
+// }
+
+// 변경(숫자1);
+// console.log(숫자1); // ?
+
+class 할아버지 {
+  constructor(name) {
+    this.성 = "kim";
+    this.name = name;
+  }
 }
 
-변경(숫자1);
-console.log(숫자1); // ?
+var 할아버지1 = new 할아버지("철수");
+
+class 아버지 extends 할아버지 {
+  constructor(name) {
+    super(name);
+    this.나이 = 50;
+  }
+}
+
+var 아버지1 = new 아버지("만수");
