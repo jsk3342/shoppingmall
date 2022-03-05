@@ -157,10 +157,90 @@ class 할아버지 {
 var 할아버지1 = new 할아버지("철수");
 
 class 아버지 extends 할아버지 {
-  constructor(name) {
+  constructor() {
     super(name);
     this.나이 = 50;
   }
 }
 
 var 아버지1 = new 아버지("만수");
+
+var 사람 = {
+  name: "park",
+  age: 30,
+  nextAge() {
+    return this.age + 1;
+  },
+  setAge(i) {
+    this.age = parseInt(i);
+  },
+};
+
+class 강아지 {
+  constructor(type, color) {
+    this.type = type;
+    this.color = color;
+  }
+  한살먹기() {
+    if (this instanceof Cat) {
+      this.age++;
+    }
+  }
+}
+
+var 강아지1 = new 강아지("말티즈", "white");
+var 강아지2 = new 강아지("진돗개", "brown");
+
+class 고양이 extends 강아지 {
+  constructor(type, color, age) {
+    super(type, color);
+    this.age = age;
+  }
+}
+
+var 고양이1 = new 고양이("코숏", "white", 5);
+var 고양이2 = new 고양이("러시안블루", "brown", 2);
+
+class unit {
+  constructor(기본공격, 기본체력) {
+    this.기본공격 = 5;
+    this.기본체력 = 100;
+  }
+  get battlePoint() {
+    return this.기본공격 + this.기본체력;
+  }
+  set heal(num) {
+    this.기본체력 = this.기본체력 + num;
+  }
+}
+
+var 유닛1 = new unit();
+console.log(유닛1);
+유닛1.heal = 50;
+
+// class 홀짝 {
+//   constructor(...숫자) {
+//     this.odd = [];
+//     this.even = [];
+//   }
+//   set 분배기(...숫자) {
+//     for (i=0; i<...숫자.length; i++)
+//       if (...숫자%0 )
+//   }
+// }
+
+var data = {
+  odd: [],
+  even: [],
+  setter함수: function (...숫자들) {
+    숫자들.forEach(a => {
+      if (a % 2 == 0) {
+        this.even.push(a);
+      } else {
+        this.odd.push(a);
+      }
+    });
+  },
+};
+
+data.setter함수(1, 2, 3);
