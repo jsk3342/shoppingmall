@@ -296,3 +296,16 @@ $.ajax({
 $.get("https://codingapple1.github.io/hello.txt").done(function (결과) {
   console.log(결과);
 });
+
+async function 성공판독기() {
+  var 판독기 = new Promise(function (성공, 실패) {
+    document.getElementById("버튼").addEventListener("click", function () {
+      성공("성공이다");
+    });
+  });
+
+  var 결과 = await 판독기;
+  console.log(결과);
+}
+
+성공판독기();
