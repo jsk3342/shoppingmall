@@ -309,3 +309,55 @@ async function 성공판독기() {
 }
 
 성공판독기();
+
+// let 데이터 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// function 구구단계산기() {
+//   for (var 결과 of 데이터) {
+//     for (var 결과2 of 데이터) {
+//       console.log(결과 * 결과2);
+//     }
+//   }
+// }
+// 구구단계산기();
+
+var products = [
+  {
+    name1: "chair",
+    price1: 7000,
+  },
+  {
+    name2: "sofa",
+    price: 5000,
+  },
+  {
+    name1: "desk",
+    price3: 9000,
+  },
+];
+
+// 1.배열의 키값을 찾는다. for~ in
+// 2.키값을 어레이로 만들고 거기서 5번쨰 숫자를 지움
+// 3.지운 어레이를 다시 배열의 키값으로 할당
+
+let newValue;
+let newKey;
+
+for (let item of products) {
+  for (let key in item) {
+    //마지막글자를 숫자로변환했을 때 NaN이 안나오면 (숫자면)
+    if (isNaN(parseInt(key.slice(-1))) == false) {
+      newValue = item[key];
+      newKey = key.slice(0, -1);
+      item[newKey] = newValue;
+      delete item[key];
+    }
+  }
+}
+
+console.log(products);
+
+var 심볼 = Symbol("설명");
+var weight = Symbol("내 시크릿 몸무게");
+var height = Symbol("내 키");
+var person = { name: "kim" };
+person[height] = 160;
