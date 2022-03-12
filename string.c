@@ -14,10 +14,23 @@ int main(void){
         }
     printf("/n");
 }
-Repeat until no swaps
+#include <stdio.h>
 
-    For i from 0 to n–2
+void swap(int a, int b);
 
-        If i'th and i+1'th elements out of order
+int main(void)
+{
+    int x = 1;
+    int y = 2;
 
-            Swap them
+    printf("x is %i, y is %i\n", x, y);
+    swap(x, y);
+    printf("x is %i, y is %i\n", x, y);
+}
+
+void swap(int a, int b)
+{
+    int tmp = a;
+    a = b;
+    b = tmp;
+}
