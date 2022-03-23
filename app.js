@@ -361,3 +361,4 @@ var weight = Symbol("내 시크릿 몸무게");
 var height = Symbol("내 키");
 var person = { name: "kim" };
 person[height] = 160;
+
